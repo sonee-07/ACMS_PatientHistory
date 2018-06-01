@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>View Patient</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" href="css/jquery_ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="js/jquery_1.12.4.js"></script>
+
+  <script src="js/jqueryui.js"></script>
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Lato|Quicksand'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/checkbox.css">
+
+<link data-require="jqueryui@*" data-semver="1.10.0" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/css/smoothness/jquery-ui-1.10.0.custom.min.css" />
+    <script data-require="jqueryui@*" data-semver="1.10.0" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/jquery-ui.js"></script>
+    <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/css/smoothness/jquery-ui-1.10.0.custom.min.css" />
+  	
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/jquery-ui.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+ <style>
+    div.justified {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+</head>
+<body style="background-color: #999999;">
+  
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="login100-more" style="background-image: url('images/3.jpg');"></div>
+
+      <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+<br> <br> <br>
+         <form action="ProcessPrescriptionServlet" method="POST">
+              
+   <br> <br> <br>     
+        <fieldset>
+
+          <div class="wrap-input100">
+            <span class="label-input100">Patient Id:</span>&nbsp;&nbsp;&nbsp;
+               <input type="text" id ="patient_id" name="patient_id" style="background-color: #cccccc;" required> 
+            <span class="focus-input100"></span>
+      </div>
+
+	
+<br> <br> <br>
+	
+	<div>
+
+		<input type="submit"  value="Fetch Form" class="button_class button1">
+	</div>
+    <script src="js/index.js"></script>
+
+
+    </fieldset>
+</form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/daterangepicker/moment.min.js"></script>
+  <script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+
+<!--  <form action="Myservlet2">
+	<input type="submit" value = "Send"  class="button_class button1">
+</form>
+-->
+     <script src="js/index.js"></script> 
+
+<script>
+
+$('.sel__box__options').click(function() { // onchange attribute
+  var txt = $(this).text();
+  var index = $(this).index();
+  //alert("hey");
+  //$(symptom1).html("niharika");
+  $(this).siblings('.sel__box__options').removeClass('selected');
+  $(this).addClass('selected');
+  
+  var $currentSel = $(this).closest('.sel');
+  $currentSel.children('.sel__placeholder').text(txt);
+  $currentSel.children('select').prop('selectedIndex', index + 1);
+  
+  var sel_ = $('#select_condition :selected').text();
+  //alert($sel_);
+   
+  if(sel_ == "Backpain"){
+	/*$(symptom1).html("Lower back pain");
+	$(symptom2).html("Inability to stand");
+	$(symptom3).html("Unable to bend");
+	$(symptom4).html("Unable to walk");
+	$(symptom5).html("Others");	
+	*/
+	
+	  document.getElementById('symptom1').innerHTML = 'Lower back pain';
+	  document.getElementById('symptom2').innerHTML = 'Inability to stand';
+	  document.getElementById('symptom3').innerHTML = 'Unable to bend';
+	  document.getElementById('symptom4').innerHTML = 'Unable to walk';
+	  document.getElementById('symptom5').innerHTML = 'Difficulty to sit';gr
+	}
+
+  if(sel_ == "Thyphoid"){
+	$(symptom1).html("Muscle pain");
+	$(symptom2).html("Rashes");
+	$(symptom3).html("Fever");
+	$(symptom4).html("Nausea");
+	$(symptom5).html("Loss of appetite");	
+	}
+
+  if(sel_ == "Diabetes"){
+  $(symptom1).html("Sudden weightloss");
+  $(symptom2).html("Always thirsty");
+  $(symptom3).html("Heavy breathing");
+  $(symptom4).html("Slow healing cuts");
+  $(symptom5).html("Nausea"); 
+  }
+
+  if(sel_ == "Migrane"){
+  $(symptom1).html("TenderScalp");
+  $(symptom2).html("Mild Headache");
+  $(symptom3).html("Depressed?");
+  $(symptom4).html("Dizziness");
+  $(symptom5).html("Nasal congestion"); 
+  }
+
+
+  if(sel_ == "General"){
+  $(symptom1).html("Head ache");
+  $(symptom2).html("Fever");
+  $(symptom3).html("Cold");
+  $(symptom4).html("Cough");
+  $(symptom5).html("Body pains"); 
+  }
+
+});
+
+</script>
+
+<script type="text/javascript">
+  function showMedication(){
+    document.getElementById('medications').style.display ='block';
+  }
+
+  function closeMedication(){
+    document.getElementById('medications').style.display ='none';
+  }
+
+  function showAlergies(){
+     document.getElementById('alergies').style.display ='block';
+  }
+
+  function closeAlergies(){
+     document.getElementById('alergies').style.display ='none';
+  }
+</script>
+</body>
+</html>
